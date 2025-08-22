@@ -33,7 +33,7 @@ export const App = () => {
     setIsReversed(!isReversed);
   }
 
-  function handleSort(field) {
+  function handleSortByField(field) {
     setSortField(field);
   }
 
@@ -62,7 +62,7 @@ export const App = () => {
         <button
           type="button"
           className={`button is-info ${sortField !== SORT_FIELD_ALPHABET ? 'is-light' : ''}`}
-          onClick={() => handleSort(SORT_FIELD_ALPHABET)}
+          onClick={() => handleSortByField(SORT_FIELD_ALPHABET)}
         >
           Sort alphabetically
         </button>
@@ -70,7 +70,7 @@ export const App = () => {
         <button
           type="button"
           className={`button is-success ${sortField !== SORT_FIELD_LENGTH ? 'is-light' : ''}`}
-          onClick={() => handleSort(SORT_FIELD_LENGTH)}
+          onClick={() => handleSortByField(SORT_FIELD_LENGTH)}
         >
           Sort by length
         </button>
